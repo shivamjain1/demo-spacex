@@ -11,8 +11,7 @@
     "dev:ssr": "ng run angular-demo:serve-ssr",
     "serve:ssr": "node dist/angular-demo/server/main.js",
     "build:ssr": "ng build --prod && ng run angular-demo:server:production",
-    "prerender": "ng run angular-demo:prerender",
-    "heroku-postbuild": "ng build --prod"
+    "prerender": "ng run angular-demo:prerender"
   },
   "private": true,
   "dependencies": {
