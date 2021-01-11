@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <h3 class="heading">SpaceX Launch Programs</h3>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
       <aside class="filters-section">
         <div class="card">
           <div class="card-body">
@@ -13,44 +13,44 @@
             <div class="filter-sub-header">
               <h5>Launch Year</h5>
             </div>
-            <ul class="filter-buttons">
-              <li
+            <div class="filter-buttons">
+              <div
                 [ngClass]="currentSelectedYear === i ? 'active' : ''"
                 *ngFor="let year of launchYears; let i = index"
                 (click)="getLaunchByYear(i)"
               >
                 {{ year }}
-              </li>
-            </ul>
+            </div>
+            </div>
             <div class="filter-sub-header">
               <h5>Successful Launch</h5>
             </div>
-            <ul class="filter-buttons">
-              <li
+            <div class="filter-buttons">
+              <div
                 [ngClass]="currentLaunchSuccessIndex === i ? 'active' : ''"
                 *ngFor="let val of success; let i = index"
                 (click)="filterByLaunchSuccess(i)"
               >
                 {{ val.key }}
-              </li>
-            </ul>
+            </div>
+            </div>
             <div class="filter-sub-header">
               <h5>Successful Landing</h5>
             </div>
-            <ul class="filter-buttons">
-              <li
+            <div class="filter-buttons">
+              <div
                 [ngClass]="currentLandSuccessIndex === i ? 'active' : ''"
                 *ngFor="let val of success; let i = index"
                 (click)="filterByLandSuccess(i)"
               >
                 {{ val.key }}
-              </li>
-            </ul>
+            </div>
+            </div>
           </div>
         </div>
       </aside>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-8">
       <p *ngIf="isLoading" class="loading-text"><strong>Loading...</strong></p>
       <div *ngIf="!isLoading" class="row">
         <div *ngIf="!launchData.length; else showRecords">
