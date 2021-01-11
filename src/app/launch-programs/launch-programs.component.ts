@@ -34,18 +34,26 @@ export class LaunchProgramsComponent implements OnInit {
   }
 
   getLaunchByYear(ind): any {
-    this.currentSelectedYear = ind;
+    this.toggleSelectedFilter('currentSelectedYear', ind);
     this.makeApiCall();
   }
 
   filterByLaunchSuccess(ind): any {
-    this.currentLaunchSuccessIndex = ind;
+    this.toggleSelectedFilter('currentLaunchSuccessIndex', ind);
     this.makeApiCall();
   }
 
   filterByLandSuccess(ind): any {
-    this.currentLandSuccessIndex = ind;
+    this.toggleSelectedFilter('currentLandSuccessIndex', ind);
     this.makeApiCall();
+  }
+
+  toggleSelectedFilter(filterValue, index): any{
+    if (this[filterValue] === index){
+      this[filterValue] = null;
+    } else {
+      this[filterValue] = index;
+    }
   }
 
   getQueryString(): any {
