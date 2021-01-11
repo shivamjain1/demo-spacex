@@ -2,6 +2,9 @@
 
 This project was deployed with Heroku [Live Demo](https://spacex-launch-demo.herokuapp.com/).
 
+# Lighthouse Score:
+![image](https://user-images.githubusercontent.com/28086341/104225576-951f7500-546c-11eb-8438-1feab3856a0e.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
