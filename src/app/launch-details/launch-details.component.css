@@ -9,3 +9,7 @@ img{
 .card{
     margin-bottom: 20px;
 }
+
+.card div {
+    font-size: 15px;
+}

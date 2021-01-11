@@ -23,7 +23,7 @@
       <div><strong>Successful Launch: </strong> {{ data.launch_success }}</div>
       <div>
         <strong>Successful Landing: </strong>
-        {{ data.launch_landing == null ? "NA" : data.launch_landing }}
+        {{ data.rocket.first_stage.cores[0].land_success == null ? "NA" : data.rocket.first_stage.cores[0].land_success }}
       </div>
     </div>
   </div>
