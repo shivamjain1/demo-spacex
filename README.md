@@ -1,6 +1,6 @@
 # Angular-SpaceX-Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
+This project was deployed with Heroku [Live Demo](https://spacex-launch-demo.herokuapp.com/).
 
 ## Development server
 
