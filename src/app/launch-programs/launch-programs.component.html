@@ -17,10 +17,10 @@
               <div
                 [ngClass]="currentSelectedYear === i ? 'active' : ''"
                 *ngFor="let year of launchYears; let i = index"
-                (click)="getLaunchByYear(i)"
+                (click)="getFilteredLaunchProgramData('currentSelectedYear', i)"
               >
                 {{ year }}
-            </div>
+              </div>
             </div>
             <div class="filter-sub-header">
               <h5>Successful Launch</h5>
@@ -29,10 +29,12 @@
               <div
                 [ngClass]="currentLaunchSuccessIndex === i ? 'active' : ''"
                 *ngFor="let val of success; let i = index"
-                (click)="filterByLaunchSuccess(i)"
+                (click)="
+                  getFilteredLaunchProgramData('currentLaunchSuccessIndex', i)
+                "
               >
                 {{ val.key }}
-            </div>
+              </div>
             </div>
             <div class="filter-sub-header">
               <h5>Successful Landing</h5>
@@ -41,10 +43,12 @@
               <div
                 [ngClass]="currentLandSuccessIndex === i ? 'active' : ''"
                 *ngFor="let val of success; let i = index"
-                (click)="filterByLandSuccess(i)"
+                (click)="
+                  getFilteredLaunchProgramData('currentLandSuccessIndex', i)
+                "
               >
                 {{ val.key }}
-            </div>
+              </div>
             </div>
           </div>
         </div>
@@ -64,7 +68,10 @@
       </div>
     </div>
     <div class="col-md-12">
-      <h4 class="footer"><strong>Developed by: </strong>Shivam Jain</h4>
+      <h4 class="footer">
+        <strong>Developed by: </strong>
+        <a href="https://github.com/shivamjain1/demo-spacex">Shivam Jain</a>
+      </h4>
     </div>
   </div>
 </div>
